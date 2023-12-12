@@ -162,6 +162,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const responseMsgUnderDonation = document.querySelector(
 		"#responseMsgUnderDonation"
 	);
+
+	const yesOrNoOption = document.querySelector("#yesOrNoOption");
 	const responseBtn02 = document.querySelector(".response-btn-02");
 
 	const appendYesBtn = () => {
@@ -260,7 +262,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const howToAdoptBtn = document.querySelector("#howToAdoptBtn");
 	const howToAdoptAppend = document.querySelector("#howToAdoptAppend");
-
+	const yesOrNoOptionAdoptProcess = document.querySelector(
+		"#yesOrNoOptionAdoptProcess"
+	);
 	const howToAdopt = () => {
 		const btn = document.createElement("button");
 
@@ -290,9 +294,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		setTimeout(function () {
 			const response = document.createElement("p");
-			response.innerHTML =
-				"To make a donation, this is our official save all account:";
+			response.innerHTML = `To make a donation, this is our official save all account:
+				<br>
+				<br>
+				<div style="background-color: #D9D9D9; padding: 12px;">
+				<p style="color: #000000">
+				BDO:<br> 006540103300 <br><br>
+				Paypal:<br> daycarlos28@gmail.com<br><br>
+				BPI:<br> 4449004634<br> Roberta Nicole C. Benedito <br><br>
+				GCASH:<br> 09178991013
+				</p>
+				</div>
+				`;
 			response.classList.add("max-w-[273px]", "w-full", "text-white");
+
+			setTimeout(function () {
+				yesOrNoOptionAdoptProcess.classList.remove("hidden");
+			}, 3000);
 
 			responseMsgDonationProcess.appendChild(response);
 			responseMsgDonationProcess.classList.remove("hidden");
@@ -307,3 +325,48 @@ document.addEventListener("DOMContentLoaded", function () {
 	initialNoBtn.addEventListener("click", initialNoBtnFunc);
 	howToAdoptBtn.addEventListener("click", howToAdopt);
 });
+
+const yesBtnAdoptProcess = document.querySelector("#yesBtnAdoptProcess");
+const appendedYesAdoptProcess = document.querySelector(
+	"#appendedYesAdoptProcess"
+);
+
+const responseMsgYesAdoptProcess = document.querySelector(
+	"#responseMsgYesAdoptProcess"
+);
+
+const appendYesBtnProcess = () => {
+	const btn = document.createElement("button");
+	btn.innerHTML = "Yes";
+	btn.classList.add(
+		"my-5",
+		"bg-shade-gray",
+		"w-[228px]",
+		"text-right",
+		"p-3",
+		"rounded-tr-3xl",
+		"rounded-tl-3xl",
+		"rounded-bl-3xl"
+	);
+
+	appendedYesAdoptProcess.appendChild(btn);
+	appendedYesAdoptProcess.classList.add("cursor-not-allowed");
+	appendedYesAdoptProcess.setAttribute("disabled", true);
+
+	setTimeout(function () {
+		const response = document.createElement("p");
+		response.innerHTML =
+			"Great, glad I could help. Thank you for visiting our chat bot!";
+		response.classList.add("max-w-[273px]", "w-full", "text-white");
+
+		responseMsgYesAdoptProcess.appendChild(response);
+
+		responseMsgYesAdoptProcess.classList.remove("hidden");
+
+		setTimeout(function () {
+			yesOrNoOption03.classList.remove("hidden");
+		}, 3000);
+	}, 2000);
+};
+
+yesBtnAdoptProcess.addEventListener("click", appendYesBtnProcess);

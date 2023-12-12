@@ -159,10 +159,29 @@
             </div>
             <div id="howToAdoptAppend" class="flex justify-end items-end">
             </div>
+
             <div id="responseMsgUnderDonationIfNo"
                 class="hidden bg-shade-green p-3 mb-5 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full"></div>
             <div id="responseMsgDonationProcess"
                 class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full"></div>
+
+            <div id="yesOrNoOptionAdoptProcess"
+                class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full mt-3">
+                <p class="text-white mb-10">
+                    Was this helpful?
+                </p>
+                <div class="flex gap-3">
+                    <button id="yesBtnAdoptProcess" class="bg-shade-gray w-[82px] text-center p-3">
+                        YES
+                    </button>
+                    <button id="noBtnAdoptProcess" class="bg-shade-gray w-[82px] text-center p-3">
+                        NO
+                    </button>
+                </div>
+            </div>
+            <div id="appendedYesAdoptProcess" class="flex justify-end items-end"></div>
+            <div id="responseMsgYesAdoptProcess"
+                class="bg-shade-green hidden p-3 mb-5 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full"></div>
         </div>
         <div class="fixed bottom-6 right-6 cursor-pointer" id="chatBotIconBtn">
             <img src=" ./assets/images/chatbot-icon.png" alt="chatbot icon img" class="w-20">

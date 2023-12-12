@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const responseBtn02 = document.querySelector(".response-btn-02");
 
 	const appendYesBtn = () => {
-		const btn = document.createElement("button");
+		const btn = document.createElement("div");
 		btn.innerHTML = "Yes";
 		btn.classList.add(
 			"my-5",
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const yesOrNoOption03 = document.querySelector("#yesOrNoOption03");
 
 	const appendBtn = () => {
-		const btn = document.createElement("button");
+		const btn = document.createElement("div");
 		btn.innerHTML = "Learn about donation";
 		btn.classList.add(
 			"my-5",
@@ -211,9 +211,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	const appendedNoBtn = document.querySelector("#appendedNoBtn");
 	const responseMsg04 = document.querySelector("#responseMsg04");
 	const responseMsg05 = document.querySelector("#responseMsg05");
+	const responseMsgUnderDonationIfNo = document.querySelector(
+		"#responseMsgUnderDonationIfNo"
+	);
+	const responseMsgDonationProcess = document.querySelector(
+		"#responseMsgDonationProcess"
+	);
 
 	const appendNoBtn = () => {
-		const btn = document.createElement("button");
+		const btn = document.createElement("div");
 		btn.innerHTML = "No";
 		btn.classList.add(
 			"my-5",
@@ -237,6 +243,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			response.classList.add("max-w-[273px]", "w-full", "text-white");
 
 			responseMsg04.appendChild(response);
+
 			responseMsg04.classList.remove("hidden");
 		}, 2000);
 
@@ -251,10 +258,52 @@ document.addEventListener("DOMContentLoaded", function () {
 		}, 3000);
 	};
 
+	const howToAdoptBtn = document.querySelector("#howToAdoptBtn");
+	const howToAdoptAppend = document.querySelector("#howToAdoptAppend");
+
+	const howToAdopt = () => {
+		const btn = document.createElement("button");
+
+		btn.innerHTML = "How can I adopt from your organization?";
+		btn.classList.add(
+			"mb-5",
+			"bg-shade-gray",
+			"w-[228px]",
+			"text-right",
+			"p-3",
+			"rounded-tr-3xl",
+			"rounded-tl-3xl",
+			"rounded-bl-3xl"
+		);
+
+		howToAdoptAppend.appendChild(btn);
+
+		setTimeout(function () {
+			const response = document.createElement("p");
+			response.innerHTML =
+				"Thank you for your interest in supporting our animal welfare initiatives! We greatly appreciate your willingness to contribute.";
+			response.classList.add("max-w-[273px]", "w-full", "text-white");
+
+			responseMsgUnderDonationIfNo.appendChild(response);
+			responseMsgUnderDonationIfNo.classList.remove("hidden");
+		}, 2000);
+
+		setTimeout(function () {
+			const response = document.createElement("p");
+			response.innerHTML =
+				"To make a donation, this is our official save all account:";
+			response.classList.add("max-w-[273px]", "w-full", "text-white");
+
+			responseMsgDonationProcess.appendChild(response);
+			responseMsgDonationProcess.classList.remove("hidden");
+		}, 3000);
+	};
+
 	const initialNoBtnFunc = () => {
 		appendNoBtn();
 	};
 
 	noBtn.addEventListener("click", appendNoBtn);
 	initialNoBtn.addEventListener("click", initialNoBtnFunc);
+	howToAdoptBtn.addEventListener("click", howToAdopt);
 });

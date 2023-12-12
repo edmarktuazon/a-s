@@ -151,8 +151,18 @@
             <div id="responseMsg04"
                 class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full"></div>
             <div id="responseMsg05"
-                class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full my-5"></div>
-
+                class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full my-5">
+                <button id="howToAdoptBtn" class="bg-shade-gray w-[228px] text-left p-3">
+                    How can I adopt from
+                    your organization?
+                </button>
+            </div>
+            <div id="howToAdoptAppend" class="flex justify-end items-end">
+            </div>
+            <div id="responseMsgUnderDonationIfNo"
+                class="hidden bg-shade-green p-3 mb-5 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full"></div>
+            <div id="responseMsgDonationProcess"
+                class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full"></div>
         </div>
         <div class="fixed bottom-6 right-6 cursor-pointer" id="chatBotIconBtn">
             <img src=" ./assets/images/chatbot-icon.png" alt="chatbot icon img" class="w-20">

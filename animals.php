@@ -27,15 +27,26 @@
 
     <?php require ('./includes/navbar.php') ?>
 
-    <section class="bg-hero-bg min-h-screen bg-center bg-cover bg-no-repeat py-10 px-8 lg:px-16">
-        <div class="flex justify-center items-start flex-col h-screen">
-            <h1 class="text-black text-3xl font-[700] mb-3 md:text-4xl lg:text-6xl">
-                Save Animals of Love and <br>
-                Light - Save All
-            </h1>
-            <p class="text-black">Save Animals of Love and Light (Save ALL) fights for animal welfare, rights and
-                protection.</p>
+    <!-- animals section -->
+    <section class="py-10 px-8 lg:px-16" id="animals">
+        <div class="border-l-4 border-black p-5">
+            <div class="mb-5">
+                <h2 class="text-shade-gray font-semibold text-2xl">
+                    OUR ANIMALS
+                </h2>
+            </div>
+            <h3>
+                If you want to see more, just click the link:
+                <a href="https://www.facebook.com/saveanimalsofloveandlightPH/photos" class="underline text-black"
+                    target="_blank">
+                    Save Animals of Love and Light - Save ALL
+                </a>
+            </h3>
         </div>
+        <figure class="mt-10">
+            <img src="./assets/images/animals.png" alt="animal group">
+        </figure>
+
         <div id="chatBox"
             class="shadow-xl bg-white p-5 rounded-lg hidden fixed bottom-24 right-[90px] overflow-auto h-[380px]">
             <div class="bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full">
@@ -73,7 +84,7 @@
             <div id="responseMsg02"
                 class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full">
                 <div class="response-btn-02 hidden gap-3">
-                    <p class="max-w-[273px] mb-10 w-full text-white">Great, glad I could help. Feel free to ask me any
+                    <p class="max-w-[273px] mb-10  w-full text-white">Great, glad I could help. Feel free to ask me any
                         additional questions.</p>
                     <button id="adoption02" class="bg-shade-gray w-[228px] text-left p-3">
                         Learn about adoption
@@ -162,6 +173,7 @@
             <img src=" ./assets/images/chatbot-icon.png" alt="chatbot icon img" class="w-20">
         </div>
     </section>
+
     <!-- chatbot  -->
     <script src="./src/script.js"></script>
 </body>

@@ -81,8 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		setTimeout(function () {
 			const response = document.createElement("p");
-			response.innerHTML =
-				"Great, glad I could help. Feel free to ask me any additional questions.";
+			response.innerHTML = "";
 			response.classList.add("max-w-[273px]", "w-full", "text-white");
 
 			responseMsg02.appendChild(response);
@@ -186,8 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		setTimeout(function () {
 			const response = document.createElement("p");
-			response.innerHTML =
-				"Great, glad I could help. Feel free to ask me any additional questions.";
+			response.innerHTML = "";
 			response.classList.add("max-w-[273px]", "w-full", "text-white");
 
 			responseMsgUnderDonation.appendChild(response);
@@ -370,3 +368,130 @@ const appendYesBtnProcess = () => {
 };
 
 yesBtnAdoptProcess.addEventListener("click", appendYesBtnProcess);
+
+const input = document.querySelector("input");
+const sendBtn = document.querySelector("#sendBtn");
+const botResponse = document.querySelector("#botResponse");
+const yesOrNoResponse = document.querySelector("#yesOrNoResponse");
+
+const sendResponse = () => {
+	const userQuestion = input.value.trim(); // Get and trim the user's question
+
+	if (userQuestion === "") {
+		console.log("Enter message");
+		return;
+	}
+
+	const messageContainer = document.createElement("div");
+	messageContainer.classList.add(
+		"my-5",
+		"bg-shade-gray",
+		"w-[228px]",
+		"text-right",
+		"p-3",
+		"rounded-tr-3xl",
+		"rounded-tl-3xl",
+		"rounded-bl-3xl"
+	);
+	messageContainer.classList.add("user-question");
+	messageContainer.textContent = userQuestion;
+
+	botResponse.appendChild(messageContainer);
+	input.value = "";
+
+	// setTimeout(function () {
+	// 	const response = document.createElement("p");
+	// 	response.innerHTML =
+	// 		"Thank you for your interest in supporting our animal welfare initiatives! We greatly appreciate your willingness to contribute.";
+	// 	response.classList.add("max-w-[273px]", "w-full", "text-white");
+
+	// 	responseMsgUnderDonationIfNo.appendChild(response);
+	// 	responseMsgUnderDonationIfNo.classList.remove("hidden");
+	// }, 2000);
+
+	// setTimeout(function () {
+	// 	const response = document.createElement("p");
+	// 	response.innerHTML = `To make a donation, this is our official save all account:
+	// 				<br>
+	// 				<br>
+	// 				<div style="background-color: #D9D9D9; padding: 12px;">
+	// 				<p style="color: #000000">
+	// 				BDO:<br> 006540103300 <br><br>
+	// 				Paypal:<br> daycarlos28@gmail.com<br><br>
+	// 				BPI:<br> 4449004634<br> Roberta Nicole C. Benedito <br><br>
+	// 				GCASH:<br> 09178991013
+	// 				</p>
+	// 				</div>
+	// 				`;
+	// 	response.classList.add("max-w-[273px]", "w-full", "text-white");
+
+	// 	setTimeout(function () {
+	// 		yesOrNoOptionAdoptProcess.classList.remove("hidden");
+	// 	}, 3000);
+
+	// 	responseMsgDonationProcess.appendChild(response);
+	// 	responseMsgDonationProcess.classList.remove("hidden");
+	// }, 3000);
+
+	setTimeout(() => {
+		if (
+			userQuestion.includes("How can i adopt") ||
+			userQuestion.includes("how can i adopt") ||
+			userQuestion.includes("How to adopt") ||
+			userQuestion.includes("how to adopt") ||
+			userQuestion.includes("How can i adopt from your organization?") ||
+			userQuestion.includes("how can i adopt from your organization?")
+		) {
+			displayMessage(
+				"Currently, we've temporarily paused adoptions as we address an erlichia outbreak. Our priority is ensuring the well-being of our animals. We appreciate your understanding and will keep you updated on our progress."
+			);
+		} else if (
+			userQuestion.includes("How can i donate?") ||
+			userQuestion.includes("how can i donate?") ||
+			userQuestion.includes("How to donate?") ||
+			userQuestion.includes("how to donate?") ||
+			userQuestion.includes("How can i donate from your organization?") ||
+			userQuestion.includes("how can i donate from your organization?")
+		) {
+			displayMessage(
+				`Thank you for your interest in supporting our animal welfare initiatives! We greatly appreciate your willingness to contribute. <br><br>
+				
+				To make a donation, this is our official save all account:
+					<br>
+				<br>
+ 				<div style="background-color: #D9D9D9; padding: 12px;">
+ 				<p style="color: #000000">
+ 				BDO:<br> 006540103300 <br><br>
+				Paypal:<br> daycarlos28@gmail.com<br><br>
+			BPI:<br> 4449004634<br> Roberta Nicole C. Benedito <br><br>
+				</p>
+					</div>`
+			);
+		} else {
+			displayMessage(
+				"Sorry, we couldn't find a matching response for your question.",
+				true
+			);
+		}
+	}, 2000);
+};
+
+const displayMessage = (message, isError = false) => {
+	const responseContainer = document.createElement("div");
+	responseContainer.innerHTML = message;
+	responseContainer.classList.remove(isError ? "success" : "error");
+	responseContainer.classList.add("max-w-[288px]", "w-full", "text-white");
+	responseContainer.classList.add(
+		"bg-shade-green",
+		"w-[228px]",
+		"text-left",
+		"p-3",
+		"rounded-tr-3xl",
+		"rounded-tl-3xl",
+		"rounded-br-3xl"
+	);
+
+	botResponse.appendChild(responseContainer);
+};
+
+sendBtn.addEventListener("click", sendResponse);

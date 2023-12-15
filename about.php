@@ -27,14 +27,60 @@
 
     <?php require ('./includes/navbar.php') ?>
 
-    <section class="bg-hero-bg min-h-screen bg-center bg-cover bg-no-repeat py-10 px-8 lg:px-16">
-        <div class="flex justify-center items-start flex-col h-screen">
-            <h1 class="text-black text-3xl font-[700] mb-3 md:text-4xl lg:text-6xl">
-                Save Animals of Love and <br>
-                Light - Save All
-            </h1>
-            <p class="text-black">Save Animals of Love and Light (Save ALL) fights for animal welfare, rights and
-                protection.</p>
+    <!-- about section -->
+    <section class="py-10 px-8 lg:px-16 bg-blue-50" id="about">
+        <div class="grid grid-cols-1 gap-10 md:gap-0 md:grid-cols-2 lg:grid-cols-3">
+            <div class="border-l-4 border-black p-5">
+                <div class="mb-5">
+                    <h2 class="text-shade-gray font-semibold text-2xl">
+                        ABOUT SALLSA
+                    </h2>
+                </div>
+                <h3>
+                    Fights for animal welfare, rights and protection.
+                </h3>
+            </div>
+            <div class="border-l-4 border-black flex items-center p-5">
+                <h2>
+                    SALLSA is Non-Governmental Organization (NGO)
+                </h2>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 mt-20 gap-10 md:grid-cols-2 lg:grid-cols-3">
+            <div class="border-l-4 border-black flex items-center bg-white p-5">
+                <p>
+                    This group started as the Efforts to Save 20 Dogs on Death Row on Dec. 1, 2013.We banded together
+                    to save 20 dogs due for euthanasia Nov. 29., 2013 at the QuezonCity Pound in Metro Manila,
+                    Philippines. We wereable to get a hold order from the Office of the CityMayor for one week to give
+                    us time to get the dogs and . save them from being killed.
+                </p>
+            </div>
+            <div class="border-l-4 border-black flex items-center bg-white  p-5">
+                <p>
+                    Save ALL has spoken in pet events and in a university about responsible pet ownership, among
+                    othersSave ALL also fed dogs in two pounds in 2014: Sundays for Pasig pound dogs and every day for
+                    six weeks at the Cainta pound for 88 dogs.Save ALL officers and admins feed strays regularly in
+                    different parts of Metro Manila and parts ofLuzon, sharing some of the donated dog food or cat
+                    food to the stray animals.Save ALL helps the Sunday Pets page of Manila Standard promote animal
+                    welfare messages such as adopt, dont shop, spay or neuter your pets, and be kind to animals
+                    through tories on pets and proper care.
+                    Save ALL has also held 12 spy-neuter programs
+                    wherein at least 300 dogs and cats have been
+                    "fixed" to help control animal population.
+                </p>
+            </div>
+            <div class="border-l-4 border-black flex items-center bg-white  p-5">
+                <p>
+                    Save ALL sent food to affected dogs and cats in Marawi during the bloody siege with the hep of
+                    Senator Nancy Binay.Save ALL asked senator Binay to help include animals in disaster preparation
+                    and management plan of the government after Taal's eruption last January, 2020. Save ALL also
+                    helped rescue stranded dogs and cats in the affected areas in Batangas, and fed dogs and cats in
+                    danger zones around Taal. Save ALL continued feeding strays during the pandemic and still feeds
+                    the homeless dogs and cats to this day. It also provides and shares dog food and cat food to
+                    individual stray feeders whenever we have extra which is now becoming seldom. Please donate dog
+                    food and cat food for our continuous Feed The Strays project.
+                </p>
+            </div>
         </div>
         <div id="chatBox"
             class="shadow-xl bg-white p-5 rounded-lg hidden fixed bottom-24 right-[90px] overflow-auto h-[380px]">
@@ -73,7 +119,7 @@
             <div id="responseMsg02"
                 class="hidden bg-shade-green p-3 rounded-tl-3xl rounded-tr-3xl rounded-br-3xl w-full">
                 <div class="response-btn-02 hidden gap-3">
-                    <p class="max-w-[273px] mb-10 w-full text-white">Great, glad I could help. Feel free to ask me any
+                    <p class="max-w-[273px] mb-10  w-full text-white">Great, glad I could help. Feel free to ask me any
                         additional questions.</p>
                     <button id="adoption02" class="bg-shade-gray w-[228px] text-left p-3">
                         Learn about adoption
